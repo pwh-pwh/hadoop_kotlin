@@ -1,0 +1,31 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.5.10'
+    id "com.github.johnrengelman.shadow" version "5.0.0"
+}
+
+group 'org.coderpwh'
+version '1.0-SNAPSHOT'
+
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'org.coderpwh.HDFSDemo1Kt'
+    }
+}
+
+repositories {
+    maven {
+        url "https://maven.aliyun.com/nexus/content/groups/public"
+    }
+}
+
+dependencies {
+
+    // https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib
+    implementation group: 'org.jetbrains.kotlin', name: 'kotlin-stdlib', version: '1.5.31'
+    // https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-client
+    implementation 'org.apache.hadoop:hadoop-client:3.3.1'
+
+
+
+}
